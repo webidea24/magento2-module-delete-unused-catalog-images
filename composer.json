@@ -1,0 +1,19 @@
+{
+    "name": "webidea24/magento2-module-delete-unused-catalog-images",
+    "description": "Magento 2 Module to delete unused catalog images",
+    "type": "magento2-module",
+    "require": {
+        "magento/framework": "*"
+    },
+    "license": [
+        "MIT"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Webidea24\\DeleteUnusedCatalogImages\\": ""
+        }
+    }
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\Console\CommandListInterface">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="wi24_analyse_unused_catalog_images" xsi:type="object">Webidea24\DeleteUnusedCatalogImages\Console\Command\Analyse</item>
+                <item name="wi24_move_unused_catalog_images" xsi:type="object">Webidea24\DeleteUnusedCatalogImages\Console\Command\Move</item>
+                <item name="wi24_delete_unused_catalog_images" xsi:type="object">Webidea24\DeleteUnusedCatalogImages\Console\Command\Delete</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <type name="Webidea24\DeleteUnusedCatalogImages\Console\Command\Move">
+        <arguments>
+            <argument name="processor" xsi:type="object">Webidea24\DeleteUnusedCatalogImages\Service\MoveService</argument>
+        </arguments>
+    </type>
+    <type name="Webidea24\DeleteUnusedCatalogImages\Console\Command\Delete">
+        <arguments>
+            <argument name="processor" xsi:type="object">Webidea24\DeleteUnusedCatalogImages\Service\DeleteService</argument>
+        </arguments>
+    </type>
+</config>
